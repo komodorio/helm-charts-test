@@ -3,7 +3,7 @@ import os
 
 
 class BankOfAnthosScenario(Scenario):
-    BANK_GIT_URL = "git@github.com:GoogleCloudPlatform/bank-of-anthos.git"
+    BANK_GIT_URL = "https://github.com/GoogleCloudPlatform/bank-of-anthos.git"
 
     def __init__(self, kubeconfig):
         super().__init__("bank-of-anthos", kubeconfig)
