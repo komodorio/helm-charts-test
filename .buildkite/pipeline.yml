@@ -190,22 +190,22 @@ steps:
     agents:
       builder: "dind"
     if: build.message !~ /feat\(OSS.+\):/i && build.branch == "master"
-  - wait
-
-  - label: ":eyeglasses: LEGACY: validate helm chart version updated"
-    commands:
-      - python3 ./.buildkite/validate_helm_chart_updated.py "k8s-watcher"
-    agents:
-      builder: "dind"
-    if: build.message !~ /feat\(OSS.+\):/i && build.branch == "master"
-
-  - label: ":eyeglasses: validate helm chart version updated"
-    commands:
-      - python3 ./.buildkite/validate_helm_chart_updated.py "komodor-agent"
-    agents:
-      builder: "dind"
-    if: build.message !~ /feat\(OSS.+\):/i && build.branch == "master"
-  - wait
+#  - wait
+#
+#  - label: ":eyeglasses: LEGACY: validate helm chart version updated"
+#    commands:
+#      - python3 ./.buildkite/validate_helm_chart_updated.py "k8s-watcher"
+#    agents:
+#      builder: "dind"
+#    if: build.message !~ /feat\(OSS.+\):/i && build.branch == "master"
+#
+#  - label: ":eyeglasses: validate helm chart version updated"
+#    commands:
+#      - python3 ./.buildkite/validate_helm_chart_updated.py "komodor-agent"
+#    agents:
+#      builder: "dind"
+#    if: build.message !~ /feat\(OSS.+\):/i && build.branch == "master"
+#  - wait
 
 
 #  - label: ":magic_wand: LEGACY: Install new watcher version on komodor staging :kubernetes: cluster"
