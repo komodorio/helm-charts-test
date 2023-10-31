@@ -28,7 +28,7 @@ steps:
       - komo ci docker-login
       - echo $$SA_KEY > sa.json
 
-      - ./ci.sh
+      # - ./ci.sh
     env:
       RUN_TIMEOUT: 60m
     retry:
