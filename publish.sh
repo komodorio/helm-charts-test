@@ -28,7 +28,6 @@ echo "GITHUB_PAGES_BRANCH=$GITHUB_PAGES_BRANCH"
 echo "HELM_CHARTS_SOURCE=$HELM_CHARTS_SOURCE"
 echo "BUILDKITE_BRANCH=$BUILDKITE_BRANCH"
 
-exit 1
 echo ">> Checking out $GITHUB_PAGES_BRANCH branch from $GITHUB_PAGES_REPO"
 rm -rf /tmp/helm/publish
 mkdir -p /tmp/helm/publish && cd /tmp/helm/publish
