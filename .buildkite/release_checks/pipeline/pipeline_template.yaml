@@ -61,7 +61,7 @@ steps:
   - wait
 
   - label: ":new: Release new charts"
-    trigger: "helm-charts"
+    trigger: "helm-charts-test"
     build:
       message: "${BUILDKITE_MESSAGE}"
       commit: "${BUILDKITE_COMMIT}"
