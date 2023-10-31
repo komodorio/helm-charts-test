@@ -183,7 +183,7 @@ steps:
 
   - label: Publish Helm charts to Github Pages
     env:
-      GITHUB_PAGES_REPO: "komodorio/helm-charts"
+      GITHUB_PAGES_REPO: "komodorio/helm-charts-test"
       BRANCH: $BUILDKITE_BRANCH
     commands:
       - ./.buildkite/pipeline_scripts/publish_helm_charts.sh
