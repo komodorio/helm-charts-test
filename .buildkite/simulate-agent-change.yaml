@@ -1,0 +1,13 @@
+steps:
+  - label: "Generate random version"
+    key: "set_version"
+    command: 'buildkite-agent meta-data set "version" "$(echo $$((RANDOM % 10)).$$((RANDOM % 10)).$$((RANDOM % 10)))"'
+
+  - trigger: helm-charts-test
+    label: "Trigger Helm Release :rocket:"
+    branches: master
+    depends_on: "set_version"
+    build:
+      branch: master
+      env:
+        PARENT_JOB_ID: "${BUILDKITE_JOB_ID}"
