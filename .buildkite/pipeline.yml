@@ -167,7 +167,7 @@ steps:
     agents:
       builder: "dind"
     key: bump-versions-legacy
-    if: build.message !~ /feat\(OSS.+\):/i && build.branch == "master" && build.env('BUILDKITE_TRIGGERED_FROM_BUILD_PIPELINE_SLUG') != "agent-stability-checks"
+    if: build.message !~ /feat\(OSS.+\):/i && build.branch == "master" && build.env('BUILDKITE_TRIGGERED_FROM_BUILD_PIPELINE_SLUG') != "agent-stability-checks-test"
 
   - label: "Bump Versions"
     commands:
