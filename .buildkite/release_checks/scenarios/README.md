@@ -20,6 +20,8 @@ To run the scenarios, follow these steps:
 
 ### Prerequisites:
 1. Cluster `kubeconfig` file, see how to generate it from [terraform](../gcp-tf/README.md#running-terraform) 
+2. Environment variable `CHART_VERSION` with chart version to install. Example: `CHART_VERSION=x.y.z+RC1`
+3. Environment variable `AGENT_API_KEY`.
 
 ### Running the scenarios script
 1. Use the following command to run the scenarios:

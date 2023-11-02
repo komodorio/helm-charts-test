@@ -208,7 +208,6 @@ steps:
 #    if: build.message !~ /feat\(OSS.+\):/i && build.branch == "master"
 #  - wait
 
-
 #  - label: ":magic_wand: LEGACY: Install new watcher version on komodor staging :kubernetes: cluster"
 #    commands:
 #      - komo ctx staging
@@ -253,7 +252,7 @@ steps:
 #    commands:
 #      - ./.buildkite/pipeline_scripts/legacy_update_agent.sh production production-legacy-chart k8s-watcher-legacy
 #      - ./.buildkite/pipeline_scripts/update_agent.sh production production komodor-agent
-#      # - ./.buildkite/pipeline_scripts/update_agent.sh production production-rc-chart komodor-agent "" "" "TODO: SET ver"
+#      - ./.buildkite/pipeline_scripts/update_agent.sh production production-rc-chart komodor-agent-rc "" "" "rc"
 #    agents:
 #      builder: "dind"
 #    plugins:

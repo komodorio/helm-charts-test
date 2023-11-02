@@ -58,7 +58,6 @@ def phase1():
         print("No RC versions found")
         sys.exit(1)
 
-    # Read pipeline yaml file
     with open(f'{SCRIPT_DIR}/pipeline_template_ph1.yaml', 'r') as f:
         pipeline_yaml = yaml.safe_load(f)
 

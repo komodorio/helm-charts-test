@@ -494,3 +494,5 @@ subjects:
   - kind: ServiceAccount
     name: {{ include "komodorAgent.serviceAccountName" . }}
     namespace: {{ .Release.Namespace }}
+
+# Dummy comment to trigger RBAC change
